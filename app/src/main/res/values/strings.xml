@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ProgressioMobileApp</string>
+    <string name="task_created">Task is successfully Created!</string>
+    <string name="task_creation_failed">Task could not be Created!</string>
+    <string name="task_updated">Task is successfully Updated!</string>
+    <string name="task_update_failed">No task to update!</string>
+    <string name="task_deleted">Task is successfully Deleted!</string>
+    <string name="task_deletion_failed">No task to delete!</string>
 </resources>

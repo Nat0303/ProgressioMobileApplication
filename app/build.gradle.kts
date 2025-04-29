@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     id("com.android.application")
     id("org.jetbrains.kotlin.android") version "2.0.21"  // Use Kotlin 2.0.21 to match the classpath version
-    id("com.google.devtools.ksp") version "2.0.21-1.0.28"  // Use a compatible KSP version with Kotlin 2.0.21
+    kotlin("kapt")
 }
 
 android {
@@ -37,23 +37,24 @@ android {
     }
     buildFeatures {
         compose = true
+        viewBinding = true
     }
 }
 
 dependencies {
-    implementation ("com.google.android.material:material:1.12.0")
-    implementation (libs.androidx.appcompat)
-
-    // Use Kotlin 2.0.21 to match the Kotlin plugin version
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:2.1.10")
-
-    // KSP version compatible with Kotlin 2.0.21
-    ksp("com.google.devtools.ksp:symbol-processing-api:1.9.22-1.0.21")  // Updated KSP version for Kotlin 2.0.21
+    implementation("com.google.android.material:material:1.12.0")
+    implementation(libs.androidx.appcompat)
+    implementation("androidx.compose.material3:material3:1.3.2") // For Material 3
 
     // Room
-    implementation("androidx.room:room-runtime:2.7.1")
-    ksp("androidx.room:room-compiler-processing:2.7.1")
-    ksp("androidx.room:room-compiler:2.7.1")
+    implementation("androidx.room:room-runtime:2.7.1") // For Room Database
+    kapt("androidx.room:room-compiler:2.7.1")
+
+    implementation("androidx.appcompat:appcompat:1.7.0") // For AppCompatDelegate
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0") // For graphs
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7") // Lifecycle extensions
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7") // ViewModel support
+    implementation ("org.jetbrains.kotlin:kotlin-stdlib:1.7.10")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -63,6 +64,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

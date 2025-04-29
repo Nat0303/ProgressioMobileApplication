@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Pie Chart Legend -->
+    <dimen name="pie_legend_form_size">6dp</dimen> <!-- Smaller color box size -->
+    <dimen name="pie_legend_form_text_spacing">4dp</dimen> <!-- Space between color box and text -->
+    <dimen name="pie_legend_item_horizontal_spacing">6dp</dimen> <!-- Horizontal space between legend items -->
+    <dimen name="pie_legend_item_vertical_spacing">4dp</dimen> <!-- Vertical space between legend items -->
+    <dimen name="pie_legend_text_size">10sp</dimen> <!-- Smaller text size for the legend -->
+</resources>

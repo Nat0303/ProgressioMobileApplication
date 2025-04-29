@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="windowBackground" format="color"/>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
+        <!-- Use a background color for the window -->
+        <item name="windowBackground">@color/white</item>
+    </style>
+</resources>

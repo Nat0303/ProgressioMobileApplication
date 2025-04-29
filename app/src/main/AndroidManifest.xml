@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -10,13 +11,25 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ProgressioMobileApp"
+        android:theme="@style/Theme.ProgressioMobileApp.Dark"
         tools:targetApi="31">
+        <activity
+            android:name=".data.TaskPage"
+            android:exported="false" />
+        <activity
+            android:name=".EditTaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateTaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AnalyticsActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.ProgressioMobileApp">
+            android:theme="@style/Theme.ProgressioMobileApp.Dark">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

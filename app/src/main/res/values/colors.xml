@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#000000</color> <!-- Black -->
+    <color name="colorPrimaryVariant">#333333</color> <!-- Darker Black -->
+    <color name="colorOnPrimary">#FFFFFF</color> <!-- White Text on Black -->
+
+    <color name="colorSecondary">#FFFFFF</color> <!-- White -->
+    <color name="colorSecondaryVariant">#CCCCCC</color> <!-- Lighter White -->
+    <color name="colorOnSecondary">#000000</color> <!-- Black Text on White -->
+
+    <color name="lavender">#FFFFFF</color> <!-- Neutral white for background -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="backgroundLight">#FFFFFF</color> <!-- Light background color -->
+    <color name="backgroundDark">#000000</color> <!-- Dark background color -->
+
+    <!-- Colors for PieChart -->
+    <color name="teal_700">#00796B</color>
+    <color name="purple_700">#6200EE</color>
+    <color name="red">#F44336</color>
+    <color name="green">#4CAF50</color>
+    <color name="blue">#2196F3</color>
+    <color name="orange">#FF9800</color>
 </resources>
+

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".AnalyticsActivity"
+    android:background="@color/backgroundLight">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Title for Task Status -->
+        <TextView
+            android:id="@+id/taskStatusTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Task Status"
+            android:textSize="24sp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAlignment="center"/>
+
+        <!-- Pie Chart for Task Status -->
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChartStatus"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            app:layout_constraintBottom_toTopOf="@+id/barChartOverdueOnTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/taskStatusTitle"
+            app:layout_constraintVertical_bias="0.407" />
+
+        <!-- Title for Overdue vs On Time -->
+        <TextView
+            android:id="@+id/overdueOnTimeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Overdue VS On Time"
+            android:textSize="24sp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintTop_toBottomOf="@+id/pieChartStatus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAlignment="center"/>
+
+        <!-- Bar Chart for Overdue vs On Time -->
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barChartOverdueOnTime"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            app:layout_constraintTop_toBottomOf="@+id/overdueOnTimeTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/pieChartCompletion"/>
+
+        <!-- Title for Task Completion -->
+        <TextView
+            android:id="@+id/taskCompletionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Task Complete"
+            android:textSize="24sp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintTop_toBottomOf="@+id/barChartOverdueOnTime"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAlignment="center"/>
+
+        <!-- Pie Chart for Task Completion -->
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChartCompletion"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            app:layout_constraintTop_toBottomOf="@+id/taskCompletionTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/barChartEmployeeTasks"/>
+
+        <!-- Title for Task Distribution Among Employees -->
+        <TextView
+            android:id="@+id/employeeTasksTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Task Distribution Among Employees"
+            android:textSize="24sp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintTop_toBottomOf="@+id/pieChartCompletion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAlignment="center"/>
+
+        <!-- Bar Chart for Task Distribution Among Employees -->
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barChartEmployeeTasks"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            app:layout_constraintTop_toBottomOf="@+id/employeeTasksTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

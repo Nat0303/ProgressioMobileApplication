@@ -7,7 +7,8 @@ import androidx.room.ForeignKey
 import androidx.room.Index
 
 
-@Entity(tableName = "Tasks",
+@Entity(
+    tableName = "Tasks",
     foreignKeys = [
         ForeignKey(entity = User::class,
             parentColumns = ["user_id"],
@@ -15,26 +16,28 @@ import androidx.room.Index
         ForeignKey(entity = Admin::class,
             parentColumns = ["admin_id"],
             childColumns = ["created_by"])
-    ])
+    ],
+    indices = [Index(value = ["assigned_to"]), Index(value = ["created_by"])]
+)
 data class Task(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "task_id")
     val taskId: Int = 0,
 
     @ColumnInfo(name = "title")
-    val title: String,
+    var title: String,
 
     @ColumnInfo(name = "description")
-    val description: String?,
+    var description: String?,
 
     @ColumnInfo(name = "status")
-    val status: String = "To-Do",
+    var status: String = "To-Do", // Default status is "To-Do"
 
     @ColumnInfo(name = "due_date")
-    val dueDate: String?,
+    var dueDate: String?,
 
     @ColumnInfo(name = "assigned_to")
-    val assignedTo: Int,
+    var assignedTo: Int,
 
     @ColumnInfo(name = "created_by")
     val createdBy: Int,
@@ -43,10 +46,10 @@ data class Task(
     val creationDate: String,
 
     @ColumnInfo(name = "completion_date")
-    val completionDate: String?,
+    val completionDate: String? = null,
 
     @ColumnInfo(name = "pending_review_time")
-    val pendingReviewTime: String?,
+    val pendingReviewTime: String? = null,
 
     @ColumnInfo(name = "history_id")
     val historyId: Int?

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/btnEditTask"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:src="@drawable/edit_square"
+            android:text="Edit" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:id="@+id/tvTaskNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:text="Number "
+                android:layout_marginBottom="4dp"/>
+
+            <!-- Progress -->
+            <TextView
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Task Title -->
+        <TextView
+            android:id="@+id/tvTaskTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Task Title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"/>
+
+        <!-- Task Status -->
+        <TextView
+            android:id="@+id/tvTaskStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status: "
+            android:textSize="18sp"
+            android:textColor="#888888"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="8dp"/>
+
+        <!-- Edit and Delete Buttons -->
+            <ImageView
+                android:id="@+id/btnDeleteTask"
+                android:layout_width="42dp"
+                android:layout_height="30dp"
+                android:src="@drawable/delete"
+                android:text="Delete"
+                android:layout_gravity="end"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

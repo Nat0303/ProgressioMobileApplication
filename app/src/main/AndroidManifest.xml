@@ -25,12 +25,12 @@
             android:name=".EmailVerificationActivity"
             android:exported="false"
             android:label="@string/title_activity_email_verification"
-            android:theme="@style/Theme.ProgressioMobileApp" />
+            android:theme="@style/Theme.ProgressioMobileApp.Light" />
         <activity
             android:name=".AnalyticsActivity"
             android:exported="false"
             android:label="@string/title_activity_analytics"
-        android:theme="@style/Theme.ProgressioMobileApp.Light" />
+            android:theme="@style/Theme.ProgressioMobileApp.Light" />
         <activity
             android:name=".CalendarAdminActivity"
             android:exported="false"
@@ -123,7 +123,7 @@
             </intent-filter>
         </activity>
 
-        
+
 
 
 

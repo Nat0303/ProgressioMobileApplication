@@ -1,0 +1,119 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundLight">
+
+        <!-- Task Title EditText -->
+        <EditText
+            android:id="@+id/etTaskTitle"
+            android:hint="Task Title"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:inputType="text"/>
+
+        <!-- Description EditText -->
+        <EditText
+            android:id="@+id/etTaskDescription"
+            android:hint="Description"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:gravity="top|start"/>
+
+        <!-- Due Date EditText -->
+        <EditText
+            android:id="@+id/etTaskDueDate"
+            android:hint="Due Date (YYYY-MM-DD)"
+            android:focusable="false"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Horizontal layout for Assign and Checklist -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="start|center_vertical">
+
+            <!-- Checklist -->
+            <CheckBox
+                android:id="@+id/checkboxChecklist"
+                android:text="Checklist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"/>
+
+            <!-- Spacer to push Assign content to the end -->
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <!-- Assign User ImageView -->
+            <ImageView
+                android:id="@+id/btnAssign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/person"
+                android:contentDescription="Assign user"
+                android:layout_marginEnd="10dp"
+                android:gravity="end"/>
+
+            <!-- Assign TextView -->
+            <TextView
+                android:id="@+id/tvAssign"
+                android:text="Assign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_marginEnd="10dp"/>
+        </LinearLayout>
+
+        <!-- Checklist and Items Container -->
+        <LinearLayout
+            android:id="@+id/checklistContainer"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="10dp">
+
+            <!-- Dynamic List of Checklist Items -->
+            <LinearLayout
+                android:id="@+id/checklistItemContainer"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/etChecklistItem"
+                android:hint="Add checklist item"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"/>
+
+            <Button
+                android:id="@+id/btnAddChecklistItem"
+                android:text="Add Checklist Item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:id="@+id/btnSubmitChecklist"
+                android:text="Submit Checklist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

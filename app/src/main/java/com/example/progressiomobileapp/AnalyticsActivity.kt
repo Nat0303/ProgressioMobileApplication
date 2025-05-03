@@ -19,7 +19,6 @@ import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.github.mikephil.charting.formatter.ValueFormatter
 
-
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -194,10 +193,6 @@ class AnalyticsActivity : BaseActivity() {
         pieChartStatus.description.isEnabled = false // Hide default description
         pieChartStatus.setUsePercentValues(true) // Enable percent values
         pieChartStatus.invalidate() // Refresh the chart
-
-
-    }
-
 
         // Customize legend
         pieChartStatus.legend.apply {
@@ -414,6 +409,5 @@ class AnalyticsActivity : BaseActivity() {
         }
 
         barChartEmployeeTasks.invalidate() // Refresh the chart
-
     }
 }

@@ -1,13 +1,9 @@
 package com.example.progressiomobileapp.data.dao
 
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
-import androidx.room.Update
-import com.example.progressiomobileapp.data.User
+import androidx.room.*
 import kotlinx.coroutines.flow.Flow
+import com.example.progressiomobileapp.data.User
+
 
 @Dao
 interface UserDao {
@@ -19,9 +15,6 @@ interface UserDao {
 
     @Query("SELECT * FROM Users WHERE email = :email")
     suspend fun getUserByEmail(email: String): User?
-
-    @Query("SELECT * FROM Users WHERE group_admin_id = :groupAdminId")
-    suspend fun getUsersByGroupAdminId(groupAdminId: Int): List<User>?
 
     @Update
     suspend fun update(user: User)

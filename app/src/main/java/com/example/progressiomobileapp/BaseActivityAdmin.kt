@@ -15,7 +15,7 @@ abstract class BaseActivity : AppCompatActivity() {
                 R.id.nav_home -> startActivity(Intent(this, HomepageAdminActivity::class.java))
                 R.id.nav_tasks -> startActivity(Intent(this, TaskAdminActivity::class.java))
                 R.id.nav_analytics -> startActivity(Intent(this, AnalyticsActivity::class.java))
-                R.id.nav_schedule -> startActivity(Intent(this, CalenderAdminActivity::class.java))
+                R.id.nav_schedule -> startActivity(Intent(this, CalendarActivity::class.java))
                 R.id.nav_profile -> startActivity(Intent(this, ProfileAdminActivity::class.java))
             }
             overridePendingTransition(0, 0) // No animation

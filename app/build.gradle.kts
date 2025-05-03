@@ -46,6 +46,7 @@ android {
 }
 
 dependencies {
+    implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")  // For ViewModel
     implementation ("androidx.compose.foundation:foundation:1.5.0")
 

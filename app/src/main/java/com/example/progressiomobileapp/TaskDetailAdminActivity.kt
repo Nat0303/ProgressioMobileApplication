@@ -14,7 +14,7 @@ class TaskDetailAdminActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_task_detail_user)
+        setContentView(R.layout.activity_task_detail_admin)
 
         // Initialize TextViews
         taskTitleTextView = findViewById(R.id.tvTaskTitle)
